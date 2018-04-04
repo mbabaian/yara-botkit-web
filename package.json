@@ -1,7 +1,7 @@
 {
-  "name": "botkit-starter-web",
+  "name": "YARA",
   "version": "0.0.1",
-  "description": "A starter kit for building a custom bot for your website with Botkit Studio",
+  "description": "Young Adult Reader Advisory bot",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
