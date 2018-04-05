@@ -8,10 +8,15 @@ module.exports = function(controller) {
         });
     });
 
-    controller.hears(['fiction', 'fiction book'], 'message_received', function(bot, message) {
-        bot.startConversation(message, function(err, convo) {
-            convo.say('If you tell me a specific genre of fiction, I can make some suggestions.')
-        });
+//     controller.hears(['fiction', 'fiction book'], 'message_received', function(bot, message) {
+//         bot.startConversation(message, function(err, convo) {
+//             convo.say('If you tell me a specific genre of fiction, I can make some suggestions.')
+//         });
+//     });
+  
+  
+    controller.hears(['fiction','fiction book'], ['message_received'], function(bot,message) {
+        bot.replyWithTyping(message,"If you tell me a specific genre of fiction, I can make some suggestions.");
     });
 
     // if user expresses interest in horror genre
@@ -19,7 +24,7 @@ module.exports = function(controller) {
         bot.startConversation(message, function(err,convo) {
              convo.say('Here is a list of recommended horror books: \n\nIt by Stephen King\n\n' +
                 'Deep and Dark and Dangerous\n\nPet Semetary\n\nThe Night Gardener');
-            convo.say('I wish I could find out the availability of these books, but ' + 
+             convo.say('I wish I could find out the availability of these books, but ' + 
                 'I\'m not equipped to handle that at this time.')
         });
     });
