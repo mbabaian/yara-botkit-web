@@ -1,28 +1,19 @@
 module.exports = function(controller) {
 
     // handle nonfiction requests
-    controller.hears(['nonfiction', 'biography', 'memoirs', 'memoir', 'folk tales', 'fairy tales', 'mythology'] , 'message_received', function(bot, message) {
+    controller.hears(['nonfiction', 'biography', 'memoirs', 'memoir', 'cook book', 'cookbook', 'folk tales', 'fairy tales', 'mythology'] , 'message_received', function(bot, message) {
         bot.startConversation(message, function(err,convo) {
             convo.say('Sorry. I\'m not equipped to handle nonfiction at this time.\nIf you know of a library ' +
             'with a public API, please let me know!')
         });
     });
 
-    controller.hears(['fiction', 'fiction book'], 'message_received', function(bot, message) {
-        bot.startConversation(message, function(err, convo) {
-            convo.say('If you tell me a specific genre of fiction, I can make some suggestions.')
-        });
+    controller.hears(['fiction','fiction book'], ['message_received'], function(bot,message) {
+        bot.reply(message,"If you tell me a specific genre of fiction, I can make some suggestions.");
     });
 
-    // if user expresses interest in horror genre
-    controller.hears(['horror', 'scary books', 'scary'], 'message_received', function(bot, message) {
-        bot.startConversation(message, function(err,convo) {
-             convo.say('Here is a list of recommended horror books: \n\nIt by Stephen King\n\n' +
-                'Deep and Dark and Dangerous\n\nPet Semetary\n\nThe Night Gardener');
-            convo.say('I wish I could find out the availability of these books, but ' + 
-                'I\'m not equipped to handle that at this time.')
-        });
-    });
+    
+    
 
     // fantasy
     controller.hears(['fantasy', 'books about fantasy', 'books with magic'], 'message_received', function(bot, message) {
@@ -36,13 +27,18 @@ module.exports = function(controller) {
     });
 
     // romance
-    controller.hears(['romance', 'romantic', 'romatic books', 'romance books'], 'message_received', function(bot, message) {
-        bot.startConversation(message, function(err,convo) {
-            convo.say('We have many wonderful romance books:\n\nPride and Prejudice and Zombies\n\n' +
+    controller.hears(['romance', 'romantic', 'romatic books', 'romance books'], ['message_received'], function(bot, message) {
+        bot.reply(message, 'We have many wonderful romance books:\n\nPride and Prejudice and Zombies\n\n' +
                 'The Scarlet Letter\n\nGirlfriend Material\n\nEverything, Everything\n\n' +
                 'All Our Pretty Songs')
-        });
     });
+       
+        // bot.startConversation(message, function(err,convo) {
+        //     convo.say('We have many wonderful romance books:\n\nPride and Prejudice and Zombies\n\n' +
+        //         'The Scarlet Letter\n\nGirlfriend Material\n\nEverything, Everything\n\n' +
+        //         'All Our Pretty Songs')
+        // });
+    // });
 
     // steampunk
     controller.hears('steampunk', 'message_received', function(bot, message) {
