@@ -33,20 +33,20 @@ I created YARA as a unique way to promote the school library program and increas
 ~~The user can initiate the conversation with a simple hello or hi.~~ After a few basic questions about reading interests, YARA gives the user a list of recommended books and provides a link to the school's card catalog.
 
 ### Fiction
-~~At this time, YARA handles a limited number of fiction categories and themes:
-- Fantasy
-- Romance
-- Dystopian
-- Time Travel
-- Humor
-- Horror
-- Vampires
-- Zombies
-- Realistic fiction
-- Historical fiction
-- Spies/Espionage
-- Fae/Faeries
-- Mystery~~
+~~At this time, YARA handles a limited number of fiction categories and themes:~~
+~~- Fantasy~~
+~~- Romance~~
+~~- Dystopian~~
+~~- Time Travel~~
+~~- Humor~~
+~~- Horror~~
+~~- Vampires~~
+~~- Zombies~~
+~~- Realistic fiction~~
+~~- Historical fiction~~
+~~- Spies/Espionage~~
+~~- Fae/Faeries~~
+~~- Mystery~~
 
 ~~Future versions will include an expanded selection of genres and titles.~~
 
