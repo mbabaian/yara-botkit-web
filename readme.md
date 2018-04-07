@@ -46,7 +46,7 @@ I created YARA as a unique way to promote the school library program and increas
 - Historical fiction
 - Spies/Espionage
 - Fae/Faeries
-- Mystery
+- Mystery~~
 
 ~~Future versions will include an expanded selection of genres and titles.~~
 
