@@ -48,7 +48,7 @@ I created YARA as a unique way to promote the school library program and increas
 - Fae/Faeries
 - Mystery
 
-~~Future versions will include an expanded selection of genres and titles.
+~~Future versions will include an expanded selection of genres and titles.~~
 
 Since YARA now queries Google Books, all young adult fiction categories are available. This change is meant to simulate how YARA would work if connected to an actual card catalog.
 
