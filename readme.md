@@ -1,118 +1,105 @@
-# Botkit Anywhere
+# Young Adult Reader Advisory bot 🤖 
+ 
 
-Embed a bot in any web page or app with Botkit for the Web.
-
-Botkit Anywhere is a self-contained chat server, API and web-based messaging client that has been built on top of the industry leading Botkit development stack.
-
-## Get Started
-
-Botkit Anywhere is built to work hand-in-hand with Botkit Studio, a
-web-based bot building, content management and analytics platform. To
-set up your own bot, sign up for a free developer account and you'll
-be guided through the process of configuring and deploying an instance
-of this starter kit!
-
-Adding new content and replies to your new bot is as easy as chatting with it using the built in chat client! You'll be a bot master in no time.
-
-**[![Sign up for Botkit Studio](https://raw.githubusercontent.com/howdyai/botkit/master/docs/studio.png)](https://studio.botkit.ai/signup?code=webreadme)**
-
-Alternately, you can deploy this starter kit project directly to Glitch, or clone it to your own development environment, then add a Botkit Studio access token at a later point.
-
-* [Remix on Glitch](https://glitch.com/~botkit-web)
-
-## Add Features with Botkit Studio
-
-Bots can be thought of as a series of pre-defined conversations, navigated by users who exchange messages with the bot application. The bot is responsible for replying with the appropriate message, and taking whatever automated actions are necessary to satisfy the user.
-
-Each "feature" of your bot will consist of one or more conversations, along with some code to power the related actions.
-
-Botkit Studio enables developers, designers, copywriters and other botmakers to build features for bots
-without writing any code by providing dialog authoring and content management tools. The visual authoring environment in Botkit Studio can be used to create branching conversations, Q&A systems, complex transactions, or any other type of conversational content.
-
-Conversational content in Botkit Studio can be updated and expanded at any time,
-without requiring changes to the bot's code. With help from Botkit's reports
-and operational tools, developers can ensure that their bot is provided the
-right answers to all the important questions.
-
-Then, with just a bit of code, your bot can access and use information from databases,
-APIs and third party services as part of the conversation. The business logic
-of your bot stays clean and easy to maintain by separating the form from the functionality. Botkit Studio will even generate this boilerplate code for you!
-
-* [Botkit Studio Knowledge Base](http://botkit.groovehq.com/help_center)
-* [Botkit Studio API documentation](https://github.com/howdyai/botkit/blob/master/docs/readme-studio.md#why-use-botkit-studio)
-
-## The full power of Botkit, in your app or site
-
-Botkit's SDK powers tens-of-thousands of bots, and supports development of chatbots on
-all major messaging platforms. Members of the Botkit developer community have created dozens of useful plugins,
-including plugins that add compatibility with top A.I. technologies like IBM Watson, DialogFlow, and RASA.
-
-New code-driven features can be added to this starter kit by creating "skills" which are
-Javascript modules containing a set of specialized pattern matchers, handler functions and middlewares.
-
-* **[How to build Botkit Skill Modules](docs/how_to_build_skills.md)**
-* [Full Botkit Documentation](https://github.com/howdyai/botkit/blob/master/docs/readme.md#developing-with-botkit)
+### >> Due to Facebook's policy change regarding bots, and a couple of other things, YARA is moving to a web platform, and some features are changing as a result. <<
 
 
-## Analytics
+<img src="https://github.com/mbabaian/yara/blob/master/yara_intro.gif" width="548">
 
-Out of the box, Botkit Anywhere works with Botkit Studio's analytics capabilities,
-which includes custom metrics, daily, weekly and monthly stats, user retention reports,
-a queryable customer database, and full transcripts of every conversation your bot conducts.
+### [YARA](https://dear-chill.glitch.me/)
 
-* [How to share user account/profile info with Botkit](docs/botkit_web_client.md#share-user-accounts--profile-data-with-botkit)
-* [Botkit Studio Metrics Knowledge Base](http://botkit.groovehq.com/knowledge_base/categories/metrics-7)
+#### Current Version 0.0.1
+YARA is an open-source bot that makes book recommedations based on a patron's reading interests. While the focus of YARA is young adult readers in high school, it can be adapted to fit the needs of any community of readers.
 
-## Customizable web-based chat client
+Since this is a side project and I am not a professional developer, you may hit a few snags here and there. I welcome any comments or bug reports. Please contact me via the email listed in the Authors section at the bottom of this page or submit an Issue. 
 
-Botkit Anywhere includes an easy to customize chat client that can be used as a full-screen web app, built into the structure
-of an existing page, or embedded in an entire site with an iframe.
+In the meantime, I encourage you to adapt and use YARA to meet the needs of your library patrons.
 
-The built-in client uses websocket connections to establish a real time connection
-to your Botkit app in order to instantly send and receive messages. It supports bot-friendly
-features like quick replies and image attachments. It gracefully handles failed connections
-and reconnects.
+### Purpose
+I created YARA as a unique way to promote the school library program and increase circulation statistics. 
 
-The chat client is built with HTML, CSS and vanilla Javascript.
-Developers can customize the look and feel of the client by modifying the included markup and CSS.
-New chat features such as custom cards or actions can be added with just a little bit of code.
+### What YARA Does
+- Conducts basic reference interview using natural language
+- Provides book recommendations based on reading preferences
+- Includes link to library card catalog 
+- Engages in polite small talk 
 
-* **[Web Chat Client Overview](docs/botkit_web_client.md)**
-* [How to embed a bot in your website](docs/botkit_web_client.md#embed-botkit-in-a-website-with-iframes)
-* [How to customize the look and feel of your web chat](docs/botkit_web_client.md#customize-the-look-and-feel-of-the-chat-interface)
-* [How to extend the UI of your web chat with custom fields](docs/botkit_web_client.md#using-botkit-studio-custom-fields-to-add-custom-features)
-* [How to share user account/profile info with Botkit](docs/botkit_web_client.md#share-user-accounts--profile-data-with-botkit)
+### What YARA Doesn't Do
+ - Conduct card catalog searches for patrons (will be added in the future)
+ - Get the status of an item (CKO/CKI/Lost)
+ - Rank books by popularity
+ 
+### How YARA Works
+~~The user can initiate the conversation with a simple hello or hi.~~ After a few basic questions about reading interests, YARA gives the user a list of recommended books and provides a link to the school's card catalog.
 
-## Chat Server and API
+### Fiction
+~~At this time, YARA handles a limited number of fiction categories and themes:~~
+~~- Fantasy~~
+~~- Romance~~
+~~- Dystopian~~
+~~- Time Travel~~
+~~- Humor~~
+~~- Horror~~
+~~- Vampires~~
+~~- Zombies~~
+~~- Realistic fiction~~
+~~- Historical fiction~~
+~~- Spies/Espionage~~
+~~- Fae/Faeries~~
+~~- Mystery~~
 
-Botkit Anywhere's built-in chat server can handle thousands of simultaneous one-on-one conversations with your users.
-The chat server provides both a websocket and a webhook based interface for sending and receiving messages.
-It is a great solution for including one-on-one chat in a web site or native app.
+~~Future versions will include an expanded selection of genres and titles.~~
 
-Additionally, Botkit Anywhere includes APIs for retrieving a user's conversation history,
-and account-linking features that enable you to identify existing users to your bot.
+Since YARA now queries Google Books, all young adult fiction categories are available. This change is meant to simulate how YARA would work if connected to an actual card catalog.
 
-* **[Chat Server Overview](docs/botkit_chat_server.md)**
-* [Communicating with Websockets](docs/botkit_chat_server.md#using-websockets)
-* [Communicating with Webhooks](docs/botkit_chat_server.md#using-webhooks)
-* [How to enable message history API](docs/botkit_chat_server.md#enable-message-history)
-* [Enable or Disable Learning Mode](docs/botkit_chat_server.md#learning-mode)
+### Nonfiction
+~~Currently, YARA does not have a nonfiction category. If the patron states a preference for nonfiction, YARA provides a direct link to the card catalog. If there is a demand for nonfiction, I will add it to future versions. But you are, of course, welcome to make any changes to YARA that you'd like.~~
 
-# Developer & Support Community
+YARA is now capable of searching nonfiction. Please note that YARA's default setting is for young adult literature.
 
-You can find full documentation for Botkit on our [GitHub page](https://github.com/howdyai/botkit/blob/master/readme.md). Botkit Studio users can access the [Botkit Studio Knowledge Base](https://botkit.groovehq.com/help_center) for help in managing their account.
 
-###  Need more help?
-* Glitch allows users to ask the community for help directly from the editor! For more information on raising your hand, [read this blog post.](https://medium.com/glitch/just-raise-your-hand-how-glitch-helps-aa6564cb1685)
+### Fun Stuff
+Try one of the following phrases with YARA:
+ 
+"My name is ________". 
 
-* Join our thriving community of Botkit developers and bot enthusiasts at large. Over 4500 members strong, [our open Slack group](http://community.botkit.ai) is _the place_ for people interested in the art and science of making bots.
+"Who am I?"
 
- Come to ask questions, share your progress, and commune with your peers!
+"Who are you?" or "Who made you?"
 
-* We also host a [regular meetup and annual conference called TALKABOT.](http://talkabot.ai) Come meet and learn from other bot developers!
+"How are you?" or "hru?"
 
- [Full video of our 2016 event is available on Youtube.](https://www.youtube.com/playlist?list=PLD3JNfKLDs7WsEHSal2cfwG0Fex7A6aok)
+"I love you."
 
-# About Botkit
+"I need a book." 
 
-Botkit is a product of [Howdy](https://howdy.ai) and made in Austin, TX with the help of a worldwide community of botheads.
+"I love books."
+
+"Do you have any books with vampires?"
+
+"Can you recommend some sci fi books?"
+
+"Thank you."
+
+"Goodbye."
+
+---
+#### ⚠️ YARA should never be used to collect information about patrons or judge their reading interests or the manner in which they communicate with YARA. If this is your reason for implementing YARA in your school library, please reconsider. A good librarian knows better.
+---
+
+Librarians are encouraged to customize YARA to match their specific collections and meet the needs of their students and teachers. 
+
+## Built With
+[Botkit](https://www.botkit.ai/)
+
+## Getting Help
+I am happy to help any librarian with coding the logic for their YARA as well as deploying it. You can contact me via the information listed below. 
+
+Botkit's Slack channel is a friendly, helpful community, and I encourage you to join it if you decide to create your own YARA.
+
+## Author
+Monica Babaian, MLS
+
+:email: monica.babaian@gmail.com
+
+Twitter: [@txlibrarianbabs](https://twitter.com/txlibrarianbabs)
