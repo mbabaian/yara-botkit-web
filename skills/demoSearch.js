@@ -39,7 +39,7 @@ module.exports = function(controller) {
                 
         // loop through first five results
         for (var i = 0; i < 4; i++) {
-            var linkToBook = results.data.items[i].link;
+            var linkToBook = results.data.items[i]["volumeInfo"]["infoLink"];
             var bookTitle = results.data.items[i]["volumeInfo"]["title"];
             var thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"];
             var author = results.data.items[i]["volumeInfo"]["authors"];
