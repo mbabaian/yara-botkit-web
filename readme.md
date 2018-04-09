@@ -57,7 +57,11 @@ Since YARA now queries Google Books, all young adult fiction categories are avai
 
 YARA is now capable of searching nonfiction. Please note that YARA's default setting is for young adult literature.
 
-
+## User Stories
+| Goals | Status |
+| ----- | ------ |
+| User can initiate query using natural language | In progress :construction: |
+| User can search by author, title, subject keyword, or young adult subgenre like horror or romance | Completed :heavy_check_mark: |
 ### Fun Stuff
 Try one of the following phrases with YARA:
  
