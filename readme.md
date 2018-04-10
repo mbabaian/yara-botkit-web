@@ -1,15 +1,12 @@
 # Young Adult Reader Advisory bot 🤖 
  
 
-### >> Due to Facebook's policy change regarding bots, and a couple of other things, YARA is moving to a web platform, and some features are changing as a result. <<
-
-
 <img src="https://github.com/mbabaian/yara/blob/master/yara_intro.gif" width="548">
 
 ### [YARA](https://dear-chill.glitch.me/)
 
 #### Current Version 0.0.1
-YARA is an open-source bot that makes book recommedations based on a patron's reading interests. While the focus of YARA is young adult readers in high school, it can be adapted to fit the needs of any community of readers.
+YARA makes book recommedations based on a patron's reading interests. While the focus of YARA is young adult readers, it can be adapted to fit the needs of any community of readers.
 
 Since this is a side project and I am not a professional developer, you may hit a few snags here and there. I welcome any comments or bug reports. Please contact me via the email listed in the Authors section at the bottom of this page or submit an Issue. 
 
@@ -30,38 +27,41 @@ I created YARA as a unique way to promote the school library program and increas
  - Rank books by popularity
  
 ### How YARA Works
-~~The user can initiate the conversation with a simple hello or hi.~~ After a few basic questions about reading interests, YARA gives the user a list of recommended books and provides a link to the school's card catalog.
+After a few basic questions about reading interests, YARA gives the user a list of recommended books and provides a link to the school's card catalog.
 
 ### Fiction
-~~At this time, YARA handles a limited number of fiction categories and themes:~~
-~~- Fantasy~~
-~~- Romance~~
-~~- Dystopian~~
-~~- Time Travel~~
-~~- Humor~~
-~~- Horror~~
-~~- Vampires~~
-~~- Zombies~~
-~~- Realistic fiction~~
-~~- Historical fiction~~
-~~- Spies/Espionage~~
-~~- Fae/Faeries~~
-~~- Mystery~~
-
-~~Future versions will include an expanded selection of genres and titles.~~
-
 Since YARA now queries Google Books, all young adult fiction categories are available. This change is meant to simulate how YARA would work if connected to an actual card catalog.
 
 ### Nonfiction
-~~Currently, YARA does not have a nonfiction category. If the patron states a preference for nonfiction, YARA provides a direct link to the card catalog. If there is a demand for nonfiction, I will add it to future versions. But you are, of course, welcome to make any changes to YARA that you'd like.~~
-
 YARA is now capable of searching nonfiction. Please note that YARA's default setting is for young adult literature.
+
 
 ## User Stories
 | Goals | Status |
 | ----- | ------ |
 | User can initiate query using natural language | In progress :construction: |
 | User can search by author, title, subject keyword, or young adult subgenre like horror or romance | Completed :heavy_check_mark: |
+| User can read a brief summary of each book | Completed :heavy_check_mark: |
+| User can view a thumbnail image of the cover, if available | Completed :heavy_check_mark: |
+| User can click a link to go to the ebook | Completed :heavy_check_mark: |
+| User can start another search after previous search is completed | In progress :construction: |
+
+### Recent Improvements
+| Goals | Status |
+| ----- | ------ |
+| Move YARA from Facebook Messenger to web platform | Completed :heavy_check_mark: |
+| User can search both young adult fiction and nonfiction | Completed :heavy_check_mark: |
+| Bot initiates conversation | Completed :heavy_check_mark: |
+
+### Upcoming Features
+| Goals | Status |
+| ----- | ------ |
+| User can communicate by voice | In progress :construction: |
+| User can connect directly to a library's card catalog | Not Yet Started :no_entry: |
+| User can find closest library | Not Yet Started :no_entry: |
+| User can get information about local library's hours and events | Not Yet Started :no_entry: |
+| User can reserve a book via the chatbot | Not Yet Started :no_entry: |
+
 ### Fun Stuff
 Try one of the following phrases with YARA:
  
