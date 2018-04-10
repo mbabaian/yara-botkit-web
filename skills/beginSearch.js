@@ -54,7 +54,7 @@ module.exports = function(controller) {
 if (results.data.items[i]["volumeInfo"]) {
 	book.link = results.data.items[i]["volumeInfo"]["infoLink"] || 'not available';
 	book.title = results.data.items[i]["volumeInfo"]["title"] || 'not available';
-	//book.thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"] || 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523302490634';	
+	book.thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"] || 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523302490634';	
 	book.author = results.data.items[i]["volumeInfo"]["authors"] || 'not available';
 }
 
