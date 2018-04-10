@@ -61,6 +61,7 @@ YARA is now capable of searching nonfiction. Please note that YARA's default set
 | User can find closest library | Not Yet Started :no_entry: |
 | User can get information about local library's hours and events | Not Yet Started :no_entry: |
 | User can reserve a book via the chatbot | Not Yet Started :no_entry: |
+| Display results in a table rather than one at a time | Not Yet Started :no_entry: |
 
 ### Fun Stuff
 Try one of the following phrases with YARA:
