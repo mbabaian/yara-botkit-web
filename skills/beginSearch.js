@@ -24,6 +24,7 @@ module.exports = function(controller) {
 
             query = response.text;
             convo.next();
+
         // trigger API call 
         controller.trigger('demoSearch', [bot, message]);
     }); 
@@ -36,43 +37,72 @@ module.exports = function(controller) {
 
             axios.get('https://www.googleapis.com/books/v1/volumes?q=' + query + '+young+adult&filter=free-ebooks')
             .then(function(results) {
+              
+              var book = {
+                  link: 'not available',
+                  title: 'not available',
+                  thumbnail: 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523303909448/350x150',
+                  author: 'not available',
+                  snippet: 'not available'
+                }
+
                 
         // loop through first five results
-        for (var i = 0; i < 4; i++) {
-            var linkToBook = results.data.items[i]["volumeInfo"]["infoLink"];
-            var bookTitle = results.data.items[i]["volumeInfo"]["title"];
-            var thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"];
-            var author = results.data.items[i]["volumeInfo"]["authors"];
-            var snippet = results.data.items[i]["searchInfo"]["textSnippet"];
+        for (var i = 0; i < 5; i++) {
+          
+          
+if (results.data.items[i]["volumeInfo"]) {
+	book.link = results.data.items[i]["volumeInfo"]["infoLink"] || 'not available';
+	book.title = results.data.items[i]["volumeInfo"]["title"] || 'not available';
+	//book.thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"] || 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523302490634';	
+	book.author = results.data.items[i]["volumeInfo"]["authors"] || 'not available';
+}
+
+if (results.data.items[i]["searchInfo"]) {
+	book.snippet = results.data.items[i]["searchInfo"]["textSnippet"] || 'not available';
+}
+          
+if (results.data.items[i]["volumeInfo"]) {
+    book.thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"] || 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523303909448/350x150';    
+} else {
+    book.thumbnail = 'https://cdn.glitch.com/7c00d0ee-c92c-4395-9300-d3b6b6930bcc%2Fimg_not_found.jpg?1523303909448/350x150';
+}
+          
+            // var linkToBook = results.data.items[i]["volumeInfo"]["infoLink"];
+            // var bookTitle = results.data.items[i]["volumeInfo"]["title"];
+            // var thumbnail = results.data.items[i]["volumeInfo"]["imageLinks"]["thumbnail"];
+            // var author = results.data.items[i]["volumeInfo"]["authors"];
+           // var snippet = results.data.items[i]["searchInfo"]["textSnippet"];
             // var categories = results.data.items[i]["volumeInfo"]["categories"] 
 
                 convo.sayFirst(
-                    "<image src=' " + thumbnail + "'>'" + 
-                    '\n\n<strong>Title: </strong><a href=" ' + linkToBook + '" target="_blank">' + bookTitle +'</a>' +
-                    "\n\n<strong> Author(s): </strong>" + author +
-                    "\n\n<strong>Snippet: </strong>" + snippet/*,'next_step'*/);
+                    "<image src=' "+ book.thumbnail + "'>'" + 
+                    '\n\n<strong>Title: </strong><a href="' + book.link + '" target="_blank">' + book.title +'</a>' +
+                    "\n\n<strong> Author(s): </strong>" + book.author +
+                    "\n\n<strong>Snippet: </strong>" + book.snippet);
                 }      
             })     
             
             .catch(function(error) {
-               // pass
-               convo.addMessage('Sorry. An error occurred: ' + error + 
-                '\n\nPlease help improve YARA by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJIjCMcQebNBEnuJmJoSvgIWR8FqkpLKcz7BGBGtnKIFg3A/viewform?usp=sf_link" target="_blank">this form</a>');
-              //  console.log(error);  
+               // convo.addMessage('Sorry. An error occurred: ' + error + 
+               //  '\n\nPlease help improve YARA by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJIjCMcQebNBEnuJmJoSvgIWR8FqkpLKcz7BGBGtnKIFg3A/viewform?usp=sf_link" target="_blank">this form</a>');
+               console.log(error);  
                 })
                
                 });
                 convo.addMessage({
                     text: 'You can check the availability any book by clicking on its title.',
                     /*action: 'next_step',*/
-                    delay: 10000
+                    delay: 10000,
                 }); 
                 // reset query
-                query = '';
+                delete query;
                 convo.addQuestion('Would you like to start another search?');
+
                   // if user says yes, it needs to start a brand new search in order to avoid looping through results
                   // right now, it's throwing errors and messing up some searches 
             });
+           
             convo.next(); 
         });   
     });
