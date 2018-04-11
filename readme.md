@@ -10,8 +10,6 @@ YARA makes book recommedations based on a patron's reading interests. While the 
 
 Since this is a side project and I am not a professional developer, you may hit a few snags here and there. I welcome any comments or bug reports. Please contact me via the email listed in the Authors section at the bottom of this page or submit an Issue. 
 
-In the meantime, I encourage you to adapt and use YARA to meet the needs of your library patrons.
-
 ### Purpose
 I created YARA as a unique way to promote the school library program and increase circulation statistics. 
 
@@ -58,49 +56,9 @@ YARA is now capable of searching nonfiction. Please note that YARA's default set
 | ----- | ------ |
 | User can communicate by voice | In progress :construction: |
 | User can connect directly to a library's card catalog | Not Yet Started :no_entry: |
-| User can find closest library | Not Yet Started :no_entry: |
-| User can get information about local library's hours and events | Not Yet Started :no_entry: |
-| User can reserve a book via the chatbot | Not Yet Started :no_entry: |
-| Display results in a table rather than one at a time | Not Yet Started :no_entry: |
 
-### Fun Stuff
-Try one of the following phrases with YARA:
- 
-"My name is ________". 
-
-"Who am I?"
-
-"Who are you?" or "Who made you?"
-
-"How are you?" or "hru?"
-
-"I love you."
-
-"I need a book." 
-
-"I love books."
-
-"Do you have any books with vampires?"
-
-"Can you recommend some sci fi books?"
-
-"Thank you."
-
-"Goodbye."
-
----
-#### ⚠️ YARA should never be used to collect information about patrons or judge their reading interests or the manner in which they communicate with YARA. If this is your reason for implementing YARA in your school library, please reconsider. A good librarian knows better.
----
-
-Librarians are encouraged to customize YARA to match their specific collections and meet the needs of their students and teachers. 
-
-## Built With
+### Made with 
 [Botkit](https://www.botkit.ai/)
-
-## Getting Help
-I am happy to help any librarian with coding the logic for their YARA as well as deploying it. You can contact me via the information listed below. 
-
-Botkit's Slack channel is a friendly, helpful community, and I encourage you to join it if you decide to create your own YARA.
 
 ## Author
 Monica Babaian, MLS
