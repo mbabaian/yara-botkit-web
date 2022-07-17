@@ -51,12 +51,6 @@ YARA is now capable of searching nonfiction. Please note that YARA's default set
 | User can search both young adult fiction and nonfiction | Completed :heavy_check_mark: |
 | Bot initiates conversation | Completed :heavy_check_mark: |
 
-### Upcoming Features
-| Goals | Status |
-| ----- | ------ |
-| User can communicate by voice | In progress :construction: |
-| User can connect directly to a library's card catalog | Not Yet Started :no_entry: |
-
 ### Made with 
 [Botkit](https://www.botkit.ai/)
 
